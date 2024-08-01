@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.banhang.ui.view.task.viewmodel.ViewModelLoaiNoiThat" />
+
+        <variable
+            name="loaiNoiThat"
+            type="com.example.banhang.ui.view.task.model.LoaiNoiThat" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{loaiNoiThat.ten_loai}" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@{loaiNoiThat.img}" />
+
+    </LinearLayout>
+</layout>

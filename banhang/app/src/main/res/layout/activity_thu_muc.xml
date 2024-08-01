@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModelLoaiNoiThat"
+            type="com.example.banhang.ui.view.task.viewmodel.ViewModelLoaiNoiThat" />
+        <variable
+            name="activityThuMuc"
+            type="com.example.banhang.ui.view.task.viewmodel.ViewModelThuMuc" />
+    </data>
+
+    <LinearLayout
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        tools:context=".ui.view.task.view.ThuMucActivity">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rclThuMuc"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@id/rclLoaiNoiThat"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rclLoaiNoiThat"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@id/rclThuMuc"
+            android:layout_weight="3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/txtEmpty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Không có loại nội thất nào"
+            android:gravity="center"
+            android:layout_weight="3"
+            android:visibility="gone" />
+    </LinearLayout>
+</layout>

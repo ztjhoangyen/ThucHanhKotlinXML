@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="dangnhapErr"
+            type="com.example.banhang.ui.view.task.model.NguoiDungDNErr" />
+
+        <variable
+            name="ViewModelDangNhap"
+            type="com.example.banhang.ui.view.task.viewmodel.ViewModelDangNhap" />
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/activity_dang_nhap"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.view.task.view.DangNhapActivity">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Đăng nhập"
+            android:textSize="18sp"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="nhap ten tai khoan"
+            android:layout_margin="16dp"
+            app:errorEnabled="true"
+            app:error="@{dangnhapErr.ten_tai_khoanErr}"
+            app:hintTextColor="@color/material_dynamic_neutral90">
+
+           <com.google.android.material.textfield.TextInputEditText
+               android:id="@+id/txtInputLayoutTaiKhoan"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="@={ViewModelDangNhap.tenTaiKhoan}"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="nhap ten pass"
+            android:layout_margin="16dp"
+            app:error="@{dangnhapErr.mat_khauErr}"
+            app:hintTextColor="@color/material_dynamic_neutral90">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtInputLayoutMatKhau"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@={ViewModelDangNhap.matKhau}"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnDangNhapdangnhap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dang nhap"/>
+        <Button
+            android:id="@+id/btnDangNhapdangky"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dang nhap"/>
+    </LinearLayout>
+</layout>

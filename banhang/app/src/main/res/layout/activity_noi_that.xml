@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="noiThat"
+            type="com.example.banhang.ui.view.task.model.NoiThat" />
+        <variable
+            name="viewModelNoiThat"
+            type="com.example.banhang.ui.view.task.viewmodel.ViewModelNoiThat" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.view.task.view.NoiThatActivity">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rclNoiThat"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@id/rclLoaiNoiThat"/>
+
+<!--        <androidx.viewpager2.widget.ViewPager2-->
+<!--            android:id="@+id/viewPager"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="300dp"/>-->
+
+<!--        <TextView-->
+<!--             android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="@{noiThat.ten_noi_that}"/>-->
+
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="@{noiThat.gia}"/>-->
+
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="@{noiThat.mo_ta}"/>-->
+
+    </LinearLayout>
+</layout>

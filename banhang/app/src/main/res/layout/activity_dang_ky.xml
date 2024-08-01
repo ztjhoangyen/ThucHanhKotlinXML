@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="dangkyErr"
+            type="com.example.banhang.ui.view.task.model.NguoiDungDKErr" />
+        <variable
+            name="viewModelDangKy"
+            type="com.example.banhang.ui.view.task.viewmodel.ViewModelDangKy" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/activityDangKy"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp"
+        tools:context=".ui.view.task.view.DangKyActivity">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtLayoutTaiKhoan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nhap ten tai khoan"
+            app:error= "@{dangkyErr.ten_tai_khoan}">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@={viewModelDangKy.tenTaiKhoan}"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtLayoutEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nhap email"
+            app:error= "@{dangkyErr.email}">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@={viewModelDangKy.email}"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtLayoutMatKhau"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nhap mat khau"
+            app:error= "@{dangkyErr.mat_khau}">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@={viewModelDangKy.matKhau}"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtLayoutHoTen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nhap ho ten"
+            app:error= "@{dangkyErr.ho_ten}">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@={viewModelDangKy.hoten}"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnDangKy_dangky"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dang ky"/>
+
+        <Button
+            android:id="@+id/btnDangKy_dangnhap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dang nhap"/>
+
+    </LinearLayout>
+</layout>
