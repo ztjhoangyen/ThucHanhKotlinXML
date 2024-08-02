@@ -37,7 +37,6 @@ class LoaiNoiThatAdapter(
             // Tạo Intent để chuyển đến Activity mới
             binding.root.setOnClickListener{
                 val context = binding.root.context
-                Log.d("LoaiNoiThatAdapter", "Starting NoiThatActivity with ID: ${loaiNoiThat._id}")
 
                 val intent = Intent(context, NoiThatActivity::class.java)
                 intent.putExtra("loaiNoiThatId", loaiNoiThat._id)

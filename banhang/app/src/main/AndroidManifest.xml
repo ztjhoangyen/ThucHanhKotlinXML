@@ -17,6 +17,9 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".ui.view.task.view.NoiThatChiTietActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.view.task.view.NoiThatActivity"
             android:exported="false" />
         <activity

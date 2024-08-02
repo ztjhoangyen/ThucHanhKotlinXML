@@ -4,13 +4,10 @@ import android.content.Context
 import android.content.Intent
 import android.view.View
 import androidx.activity.viewModels
-import androidx.lifecycle.ReportFragment.Companion.reportFragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.banhang.R
 import com.example.banhang.databinding.ActivityThuMucBinding
 import com.example.banhang.ui.base.BaseActivityNew
-import com.example.banhang.ui.view.task.adapter.ThuMucAdapter
-import com.example.banhang.ui.view.task.model.ThuMuc
 import com.example.banhang.ui.view.task.viewmodel.ViewModelLoaiNoiThat
 import com.example.banhang.ui.view.task.viewmodel.ViewModelThuMuc
 
@@ -61,7 +58,6 @@ class ThuMucActivity : BaseActivityNew<ActivityThuMucBinding>(){
             binding.txtEmpty.visibility = if (loaiNoiThats.isNullOrEmpty()) View.VISIBLE else View.GONE
             binding.rclLoaiNoiThat.visibility = if (loaiNoiThats.isNullOrEmpty()) View.GONE else View.VISIBLE
         }
-
     }
 
     private fun ItemClickThuMuc(){

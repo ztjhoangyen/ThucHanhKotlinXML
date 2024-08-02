@@ -5,9 +5,6 @@
 
     <data>
         <variable
-            name="noiThat"
-            type="com.example.banhang.ui.view.task.model.NoiThat" />
-        <variable
             name="viewModelNoiThat"
             type="com.example.banhang.ui.view.task.viewmodel.ViewModelNoiThat" />
     </data>
@@ -19,6 +16,10 @@
         android:orientation="vertical"
         tools:context=".ui.view.task.view.NoiThatActivity">
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="HHHHH"/>
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rclNoiThat"
             android:layout_width="match_parent"
@@ -31,20 +32,7 @@
 <!--            android:layout_width="match_parent"-->
 <!--            android:layout_height="300dp"/>-->
 
-<!--        <TextView-->
-<!--             android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="@{noiThat.ten_noi_that}"/>-->
 
-<!--        <TextView-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="@{noiThat.gia}"/>-->
-
-<!--        <TextView-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="@{noiThat.mo_ta}"/>-->
 
     </LinearLayout>
 </layout>

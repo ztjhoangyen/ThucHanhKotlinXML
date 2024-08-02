@@ -29,7 +29,10 @@ interface ApiService {
     suspend fun getloaiNoiThats(@Path("id") id : String) : Response<List<LoaiNoiThat>>
 
     @GET("noiThat/{id}")
-    suspend fun getNoiThat(@Path("id") id : String) : Response<NoiThat>
+    suspend fun getNoiThat(@Path("id") id : String) : Response<List<NoiThat>>
+
+    @GET("noiThatCT/{id}")
+    suspend fun getNoiThatCT(@Path("id") id : String) : Response<NoiThat>
 
 
 
