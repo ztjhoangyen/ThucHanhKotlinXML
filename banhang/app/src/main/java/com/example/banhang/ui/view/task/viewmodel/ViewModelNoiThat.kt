@@ -1,5 +1,6 @@
 package com.example.banhang.ui.view.task.viewmodel
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -20,6 +21,9 @@ class ViewModelNoiThat : ViewModel() {
     val noiThatErr: LiveData<String?> = _noiThatErr
 
     val adapter = NoiThatAdapter(mutableListOf(), this)
+
+    private val _soluong = MutableLiveData(0)
+    val soluong : LiveData<Int> get() = _soluong
 
     fun getNoiThat(id : String){
         viewModelScope.launch {
@@ -50,6 +54,20 @@ class ViewModelNoiThat : ViewModel() {
             }catch (e : Exception){
 
             }
+        }
+    }
+
+    fun tangSoLuong(){
+//        tại sao phải đặt biến tạm tại vì đỡ phải kiểm tra null nhiều lần
+        val currentNoiThatCT = _noiThatCT.value
+        if(currentNoiThatCT?.so_luong!! > _soluong.value!!){
+            _soluong.value = (_soluong.value ?: 0) + 1
+        }
+    }
+
+    fun giamSoLuong(){
+        if(soluong.value != null && soluong.value!! > 0){
+            _soluong.value = _soluong.value!! -1
         }
     }
 }
